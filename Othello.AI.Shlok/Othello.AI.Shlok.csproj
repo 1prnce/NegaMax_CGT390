@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Othello.AI.Shlok</RootNamespace>
+    <AssemblyName>Othello.AI.Shlok</AssemblyName>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include="..\Othello.Contract\Othello.Contract.csproj" />
+  </ItemGroup>
+ 
+</Project>

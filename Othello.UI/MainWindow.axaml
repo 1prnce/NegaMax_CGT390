@@ -1,0 +1,67 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="Othello.UI.MainWindow"
+        Title="Othello AI Battle"
+        Width="900" Height="700">
+    
+    <Grid ColumnDefinitions="*, 300">
+        <!-- Game Board -->
+        <Border Grid.Column="0" Background="#2e7d32" Margin="20" CornerRadius="8" BoxShadow="0 4 8 0 #40000000">
+            <DockPanel>
+                <Grid DockPanel.Dock="Top" ColumnDefinitions="*, *" Margin="10">
+                    <TextBlock Name="CurrentBlackName" Text="Black: -" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock Name="CurrentWhiteName" Grid.Column="1" Text="White: -" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+                </Grid>
+                <UniformGrid Name="BoardGrid" Rows="8" Columns="8" Margin="5"/>
+            </DockPanel>
+        </Border>
+
+        <!-- Sidebar -->
+        <StackPanel Grid.Column="1" Margin="20" Spacing="15">
+            <TextBlock Text="Othello AI Battle" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            
+            <Border Background="#f5f5f5" Padding="15" CornerRadius="8">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Black AI (Starts)" FontWeight="SemiBold"/>
+                    <Button Name="LoadBlackButton" Content="Load Black AI DLL" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <TextBlock Name="BlackAIName" Text="Not Loaded" Foreground="Gray" FontSize="12"/>
+                    
+                    <Separator Margin="0,5"/>
+                    
+                    <TextBlock Text="White AI" FontWeight="SemiBold"/>
+                    <Button Name="LoadWhiteButton" Content="Load White AI DLL" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <TextBlock Name="WhiteAIName" Text="Not Loaded" Foreground="Gray" FontSize="12"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#e3f2fd" Padding="15" CornerRadius="8">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Tournament Mode" FontWeight="SemiBold" Foreground="#1976d2"/>
+                    <Button Name="LoadTourneyDirButton" Content="Select AI Directory" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <TextBlock Name="TourneyStatus" Text="No directory selected" Foreground="Gray" FontSize="12" TextWrapping="Wrap"/>
+                    <Button Name="StartTourneyButton" Content="Start Tournament" IsEnabled="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#1976d2" Foreground="White" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#f5f5f5" Padding="15" CornerRadius="8">
+                <StackPanel Spacing="5">
+                    <TextBlock Text="Game Status" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBlock Name="StatusText" Text="Waiting for AIs..." TextWrapping="Wrap"/>
+                    <Separator Margin="0,5"/>
+                    <TextBlock Name="ScoreText" Text="Black: 2 - White: 2" FontSize="18" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+
+            <Button Name="StartButton" Content="Start Match" IsEnabled="False" 
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" 
+                    Padding="10" Background="#1976d2" Foreground="White" FontWeight="Bold"/>
+            
+            <ScrollViewer Height="150">
+                <TextBlock Name="LogText" Text="Logs:" FontSize="10" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>

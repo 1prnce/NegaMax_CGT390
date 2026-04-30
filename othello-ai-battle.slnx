@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="Othello.AI.Random1/Othello.AI.Random1.csproj" />
+  <Project Path="Othello.AI.Random2/Othello.AI.Random2.csproj" />
+  <Project Path="Othello.AI.Random3/Othello.AI.Random3.csproj" />
+  <Project Path="Othello.AI.Random4/Othello.AI.Random4.csproj" />
+  <Project Path="Othello.AI.Shlok/Othello.AI.Shlok.csproj" />
+  <Project Path="Othello.Contract/Othello.Contract.csproj" />
+  <Project Path="Othello.Engine/Othello.Engine.csproj" />
+  <Project Path="Othello.UI/Othello.UI.csproj" />
+</Solution>

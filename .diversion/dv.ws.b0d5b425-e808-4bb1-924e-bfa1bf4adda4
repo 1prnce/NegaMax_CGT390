@@ -1,0 +1,15 @@
+{
+  "WorkspaceID": "dv.ws.b0d5b425-e808-4bb1-924e-bfa1bf4adda4",
+  "RepoID": "dv.repo.02529280-87a4-46c6-a249-2b69be7a0436",
+  "Path": "C:\\Users\\jeffp\\Downloads\\head2head_othello",
+  "AccountID": "Google_111173415850322320844",
+  "BranchID": "dv.branch.1",
+  "BranchName": "main",
+  "CommitID": "dv.commit.4",
+  "Paused": false,
+  "ShouldDownload": false,
+  "RepoName": "head2head_othello",
+  "ReadOnly": false,
+  "DigestMethod": "sha1",
+  "OrganizationTier": "INDIE"
+}
